@@ -1,0 +1,11 @@
+from modelos.persona import Persona
+
+# Clase derivada: Estudiante (hereda de Persona)
+class Estudiante(Persona):
+    def __init__(self, nombre: str, edad: int, carrera: str):
+        super().__init__(nombre, edad)  # llamada al constructor de la clase base
+        self.carrera = carrera
+
+    # Sobrescritura del método presentarse (polimorfismo)
+    def presentarse(self):
+        return f"Hola, soy {self.get_nombre()}, tengo {self.get_edad()} años y estudio {self.carrera}."
