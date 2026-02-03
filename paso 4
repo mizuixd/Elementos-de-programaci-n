@@ -1,0 +1,18 @@
+from modelos.persona import Persona
+from modelos.estudiante import Estudiante
+from servicios.gestion import Gestion
+
+def main():
+    # Crear instancias
+    persona1 = Persona("Carlos", 40)
+    estudiante1 = Estudiante("Mateo", 20, "Ingeniería en Computación")
+
+    # Servicio de gestión
+    gestion = Gestion()
+
+    # Demostración de polimorfismo
+    gestion.mostrar_info(persona1)
+    gestion.mostrar_info(estudiante1)
+
+if __name__ == "__main__":
+    main()
