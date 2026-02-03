@@ -1,0 +1,8 @@
+from modelos.estudiante import Estudiante
+from modelos.persona import Persona
+
+# Servicio que gestiona las instancias
+class Gestion:
+    def mostrar_info(self, persona: Persona):
+        # Polimorfismo: el método presentarse se comporta distinto según la clase
+        print(persona.presentarse())
