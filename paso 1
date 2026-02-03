@@ -1,0 +1,25 @@
+# Clase base: Persona
+# Ejemplo de encapsulación con atributos privados (_nombre, _edad)
+
+class Persona:
+    def __init__(self, nombre: str, edad: int):
+        self._nombre = nombre   # atributo encapsulado
+        self._edad = edad       # atributo encapsulado
+
+    # Métodos getter y setter para acceder a atributos privados
+    def get_nombre(self):
+        return self._nombre
+
+    def set_nombre(self, nuevo_nombre: str):
+        self._nombre = nuevo_nombre
+
+    def get_edad(self):
+        return self._edad
+
+    def set_edad(self, nueva_edad: int):
+        if nueva_edad >= 0:
+            self._edad = nueva_edad
+
+    # Método común que será sobrescrito en la clase derivada (polimorfismo)
+    def presentarse(self):
+        return f"Hola, soy {self._nombre} y tengo {self._edad} años."
